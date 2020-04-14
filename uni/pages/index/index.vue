@@ -72,9 +72,9 @@
 			<view class="footer-content">
 				<view class="btn">
 					<button class="l">了解更多</button>
-					<button class="r">跳转公众号文章</button>
+					<button class="r" @click="onCallTel">400-086-2020</button>
 				</view>
-				<view class="tel" @click="onCallTel">400-086-2020</view>
+				<!-- <view class="tel" @click="onCallTel">400-086-2020</view> -->
 			</view>
 			<view class="logo">
 				<image class="img" src="/static/logo.png"></image>
@@ -254,7 +254,7 @@
 			.swiper {
 				padding-bottom: 60rpx;
 				height: 500rpx;
-				.swiper-item {
+				swiper-item {
 					display: flex;
 					justify-content: center;
 					.img {

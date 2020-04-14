@@ -112,7 +112,7 @@ page {
     padding-bottom: 60rpx;
     height: 500rpx;
 }
-.container .swiper-container .swiper .swiper-item {
+.container .swiper-container .swiper swiper-item {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
@@ -120,7 +120,7 @@ page {
       -webkit-justify-content: center;
               justify-content: center;
 }
-.container .swiper-container .swiper .swiper-item .img {
+.container .swiper-container .swiper swiper-item .img {
         display: block;
         width: 558rpx;
         height: 416rpx;
