@@ -7614,9 +7614,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!**********************************!*\
-  !*** E:/git/mini/uni/pages.json ***!
-  \**********************************/
+/*!******************************!*\
+  !*** D:/mini/uni/pages.json ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8520,20 +8520,20 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!***************************************************!*\
-  !*** E:/git/mini/uni/pages.json?{"type":"style"} ***!
-  \***************************************************/
+/*!***********************************************!*\
+  !*** D:/mini/uni/pages.json?{"type":"style"} ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "蘑菇物联", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/webView/webView": { "navigationBarTitleText": "面对疫情冲击，设备代理商不想打价格战，还能怎么办？", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "蘑菇物联", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "蘑菇物联" }, "pages/webView/webView": { "navigationBarTitleText": "面对疫情冲击，设备代理商不想打价格战，还能怎么办？" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "蘑菇物联", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
-/*!**************************************************!*\
-  !*** E:/git/mini/uni/pages.json?{"type":"stat"} ***!
-  \**************************************************/
+/*!**********************************************!*\
+  !*** D:/mini/uni/pages.json?{"type":"stat"} ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9469,9 +9469,9 @@ if (hadRuntime) {
 
 /***/ }),
 /* 24 */
-/*!***************************************!*\
-  !*** E:/git/mini/uni/models/index.js ***!
-  \***************************************/
+/*!***********************************!*\
+  !*** D:/mini/uni/models/index.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9513,9 +9513,9 @@ new IndexModel();exports.default = _default;
 
 /***/ }),
 /* 25 */
-/*!***************************************!*\
-  !*** E:/git/mini/uni/config/index.js ***!
-  \***************************************/
+/*!***********************************!*\
+  !*** D:/mini/uni/config/index.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9525,9 +9525,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 26 */
-/*!*************************************!*\
-  !*** E:/git/mini/uni/util/utils.js ***!
-  \*************************************/
+/*!*********************************!*\
+  !*** D:/mini/uni/util/utils.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
