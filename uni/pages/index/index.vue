@@ -71,7 +71,7 @@
 			<image class="pig" mode="widthFix" src="/static/pig-06.jpg"></image>
 			<view class="footer-content">
 				<view class="btn">
-					<button class="l">了解更多</button>
+					<button class="l" @click="onGoToWebView">了解更多</button>
 					<button class="r" @click="onCallTel">400-086-2020</button>
 				</view>
 				<!-- <view class="tel" @click="onCallTel">400-086-2020</view> -->
@@ -164,6 +164,12 @@
 			},
 			onHideDialog() {
 				this.dialogFlag = false
+			},
+			onGoToWebView() {
+				uni.navigateTo({
+				    url: `/pages/webView/webView?src=${encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ')}`
+				    // url: `/pages/webView/webView?src=${encodeURIComponent('https://baidu.com')}`
+				});
 			},
 			onCallTel() {
 				uni.makePhoneCall({
