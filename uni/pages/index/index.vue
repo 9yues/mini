@@ -168,7 +168,6 @@
 			onGoToWebView() {
 				uni.navigateTo({
 				    url: `/pages/webView/webView?src=${encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ')}`
-				    // url: `/pages/webView/webView?src=${encodeURIComponent('https://baidu.com')}`
 				});
 			},
 			onCallTel() {

@@ -309,9 +309,8 @@ var _utils = __webpack_require__(/*! @/util/utils */ 26);function _interopRequir
     },
     onGoToWebView: function onGoToWebView() {
       uni.navigateTo({
-        url: "/pages/webView/webView?src=".concat(encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ'))
-        // url: `/pages/webView/webView?src=${encodeURIComponent('https://baidu.com')}`
-      });
+        url: "/pages/webView/webView?src=".concat(encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ')) });
+
     },
     onCallTel: function onCallTel() {
       uni.makePhoneCall({
