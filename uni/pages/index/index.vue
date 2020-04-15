@@ -68,7 +68,7 @@
 		</view>
 		
 		<view class="footer-container">
-			<image class="pig" mode="widthFix" src="/static/pig-06.jpg"></image>
+			<image class="pig" mode="center" src="/static/pig-06.jpg"></image>
 			<view class="footer-content">
 				<view class="btn">
 					<button class="l" @click="onGoToWebView">了解更多</button>
@@ -273,9 +273,12 @@
 		.footer-container {
 			margin-top: -160rpx;
 			position: relative;
+			.pig {
+				height: 600rpx;
+			}
 			.footer-content{
 				position: absolute;
-				top: 60%;
+				top: 40%;
 				left: 10%;
 				width: 80%;
 				text-align: center;

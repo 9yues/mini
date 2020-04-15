@@ -8,8 +8,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.2",
-	"appid": "wxe68a7c20d9c3125e",
-	"projectname": "%E8%98%91%E8%8F%87%E7%89%A9%E8%81%94",
+	"appid": "touristappid",
+	"projectname": "uni",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

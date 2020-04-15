@@ -129,9 +129,12 @@ page {
   margin-top: -160rpx;
   position: relative;
 }
+.container .footer-container .pig {
+    height: 600rpx;
+}
 .container .footer-container .footer-content {
     position: absolute;
-    top: 60%;
+    top: 40%;
     left: 10%;
     width: 80%;
     text-align: center;
