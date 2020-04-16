@@ -307,7 +307,21 @@ var _utils = __webpack_require__(/*! @/util/utils */ 26);function _interopRequir
     onHideDialog: function onHideDialog() {
       this.dialogFlag = false;
     },
-    onGoToWebView: function onGoToWebView() {
+    getUserInfo: function getUserInfo(e) {
+
+      // 先走授权
+      console.log(e);
+      var errMsg = e.detail.errMsg;
+
+      // 失败不管他
+      if (errMsg != 'getUserInfo:ok') {
+        uni.showToast({
+          title: '授权失败',
+          icon: 'none',
+          duration: 2000 });
+
+        return;
+      }
       uni.navigateTo({
         url: "/pages/webView/webView?src=".concat(encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ')) });
 

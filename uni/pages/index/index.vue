@@ -51,7 +51,7 @@
 		
 		<view class="swiper-container">
 			
-			<view class="swiper-title">已服务60+制造行业，累计省电超千万度</view>
+			<view class="swiper-title">已<text class="b">服务</text>60+制造行业，累计省电超千万度</view>
 			
 			<swiper class="swiper" indicator-color="rgba(191,225,254)" indicator-active-color="#148ffa" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="500">
 				<swiper-item>
@@ -71,7 +71,7 @@
 			<image class="pig" mode="center" src="/static/pig-06.jpg"></image>
 			<view class="footer-content">
 				<view class="btn">
-					<button class="l" @click="onGoToWebView">了解更多</button>
+					<button class="l" open-type="getUserInfo" @getuserinfo="getUserInfo">了解更多</button>
 					<button class="r" @click="onCallTel">400-086-2020</button>
 				</view>
 				<!-- <view class="tel" @click="onCallTel">400-086-2020</view> -->
@@ -165,7 +165,21 @@
 			onHideDialog() {
 				this.dialogFlag = false
 			},
-			onGoToWebView() {
+			getUserInfo(e) {
+				
+				// 先走授权
+				console.log(e)
+				const errMsg = e.detail.errMsg
+				
+				// 失败不管他
+				if (errMsg != 'getUserInfo:ok') {
+					uni.showToast({
+					    title: '授权失败',
+						icon: 'none',
+					    duration: 2000
+					})
+					return
+				}
 				uni.navigateTo({
 				    url: `/pages/webView/webView?src=${encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ')}`
 				});
@@ -235,7 +249,7 @@
 				}
 			}
 			.form-btn {
-				margin-top: 80rpx;
+				margin: 80rpx 0;
 				button {
 					border-radius: 20px;
 					background-color: $color-theme;
@@ -247,7 +261,7 @@
 			position: relative;
 			z-index: 9;
 			width: 90%;
-			margin: 0 auto;
+			margin: -40rpx auto 0 auto;
 			background-color: #fff;	
 			border-radius: 6px;
 			text-align: center;
@@ -255,6 +269,9 @@
 				padding: 40rpx 0;
 				font-size: 32rpx;
 				color: $color-theme;
+				.b {
+					font-weight: bold;
+				}
 			}
 			.swiper {
 				padding-bottom: 60rpx;
@@ -278,18 +295,18 @@
 			}
 			.footer-content{
 				position: absolute;
-				top: 40%;
+				top: 45%;
 				left: 10%;
 				width: 80%;
 				text-align: center;
 				.btn {
 					display: flex;
-					justify-content: space-between;
-					.l {
-						margin-right: 20rpx;
-					}
+					flex-direction: column;
 					button {
+						margin-bottom: 30rpx;
 						flex: 1;
+						display: block;
+						width: 100%;
 						border-radius: 20px;
 						background-color: $color-theme;
 						color: #fff;
@@ -297,7 +314,6 @@
 					}
 				}
 				.tel {
-					margin-top: 20rpx;
 					font-size: 28rpx;
 					color: #fff;
 				}
@@ -350,8 +366,8 @@
 				position: absolute;
 				right: 16rpx;
 				top: 16rpx;
-				width: 17rpx;
-				height: 16rpx;
+				width: 48rpx;
+				height: 48rpx;
 			}
 		}
 		.dialog-bd{
