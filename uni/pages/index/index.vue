@@ -126,11 +126,10 @@
 				dialogFlag: false
 			}
 		},
-		async onLoad() {
-			this.list = await IndexModel._getData()
+		onLoad() {
 		},
 		methods: {
-			onSubmit() {
+			async onSubmit() {
 				
 				const duration = 2000
 				if (!this.form.num1) {
@@ -143,7 +142,7 @@
 				}
 				if (!this.form.num2) {
 					uni.showToast({
-					    title: '请输入工频空压机台数',
+					    title: '请输入变频空压机台数',
 						icon: 'none',
 					    duration
 					})
@@ -157,7 +156,18 @@
 					})
 					return
 				}
+				await IndexModel._submitForm({
+					compressorss_number: this.form.num1,
+					conversion_number: this.form.num2,
+					phone: this.form.tel,
+				})
+				this.onClearForm()
 				this.onShowDialog()
+			},
+			onClearForm() {
+				this.form.num1 = ''
+				this.form.num2 = ''
+				this.form.tel = ''
 			},
 			onShowDialog() {
 				this.dialogFlag = true
@@ -165,11 +175,12 @@
 			onHideDialog() {
 				this.dialogFlag = false
 			},
-			getUserInfo(e) {
+			async getUserInfo(e) {
 				
 				// 先走授权
 				console.log(e)
-				const errMsg = e.detail.errMsg
+				const { errMsg, userInfo } = e.detail
+				console.log(userInfo)
 				
 				// 失败不管他
 				if (errMsg != 'getUserInfo:ok') {
@@ -180,9 +191,18 @@
 					})
 					return
 				}
+				
+				await IndexModel._submitUserInfo({
+					nickname: userInfo.nickName,
+					gender: userInfo.gender === 0 ? '未知' : userInfo.gender === 1 ? '男' : '女',
+					user_avator: userInfo.avatarUrl,
+					country: userInfo.country,
+					province: userInfo.province,
+					city: userInfo.city
+				})
 				uni.navigateTo({
 				    url: `/pages/webView/webView?src=${encodeURIComponent('https://mp.weixin.qq.com/s/xU8FOaGlF0tqK_b5VGV1iQ')}`
-				});
+				})
 			},
 			onCallTel() {
 				uni.makePhoneCall({
