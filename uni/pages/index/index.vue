@@ -51,7 +51,7 @@
 		
 		<view class="swiper-container">
 			
-			<view class="swiper-title">已<text class="b">服务</text>60+制造行业，累计省电超千万度</view>
+			<view class="swiper-title"><text class="b">已覆盖60+制造行业，累计省电超千万度</text></view>
 			
 			<swiper class="swiper" indicator-color="rgba(191,225,254)" indicator-active-color="#148ffa" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="500">
 				<swiper-item>
@@ -345,8 +345,8 @@
 				width: 100%;
 				text-align: center;
 				.img {
-					width: 126rpx;
-					height: 40rpx;
+					width: 201rpx;
+					height: 64rpx;
 				}
 			}
 		}
